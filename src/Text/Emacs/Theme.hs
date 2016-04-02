@@ -22,23 +22,23 @@ import           GHC.Generics
 import           Text.Regex           (Regex, matchRegexAll, mkRegex, subRegex)
 
 data Palette = Palette {
-    fg1     :: String
-  , fg2     :: String
-  , fg3     :: String
-  , fg4     :: String
-  , bg1     :: String
-  , bg2     :: String
-  , bg3     :: String
-  , bg4     :: String
-  , builtin :: String
-  , keyword :: String
-  , const   :: String
-  , comment :: String
-  , func    :: String
-  , str     :: String
-  , types   :: String
-  , var     :: String
-  , warning :: String
+    fg1      :: String
+  , fg2      :: String
+  , fg3      :: String
+  , fg4      :: String
+  , bg1      :: String
+  , bg2      :: String
+  , bg3      :: String
+  , bg4      :: String
+  , builtin  :: String
+  , keyword  :: String
+  , constant :: String
+  , comment  :: String
+  , func     :: String
+  , str      :: String
+  , types    :: String
+  , var      :: String
+  , warning  :: String
 } deriving ( Generic, Show )
 
 instance FromJSON Palette
@@ -58,7 +58,7 @@ class ToMap a where
     toStringMap :: a -> M.Map String String
 
 instance ToMap Palette where
-    toStringMap (Palette fg1 fg2 fg3 fg4 bg1 bg2 bg3 bg4 builtin keyword const comment func str types var warning) =
+    toStringMap (Palette fg1 fg2 fg3 fg4 bg1 bg2 bg3 bg4 builtin keyword constant comment func str types var warning) =
         M.fromList [ ("fg1", fg1)
                    , ("fg2", fg2)
                    , ("fg3", fg3)
@@ -69,7 +69,7 @@ instance ToMap Palette where
                    , ("bg4", bg4)
                    , ("builtin", builtin)
                    , ("keyword", keyword)
-                   , ("constant", const)
+                   , ("constant", constant)
                    , ("comment", comment)
                    , ("function", func)
                    , ("string", str)
