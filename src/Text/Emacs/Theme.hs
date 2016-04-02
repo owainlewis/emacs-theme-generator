@@ -14,10 +14,11 @@ module Text.Emacs.Theme
        ) where
 
 import           Control.Applicative  ((<$>))
-import           Control.Monad        (mzero)
+import           Control.Monad        (liftM, mzero)
 import           Data.Aeson
 import qualified Data.ByteString.Lazy as BS
 import qualified Data.Map             as M
+import           Data.Maybe           (fromMaybe)
 import           Data.Monoid          ((<>))
 import           GHC.Generics
 import           Text.Regex           (Regex, matchRegexAll, mkRegex, subRegex)
@@ -35,10 +36,10 @@ data Palette = Palette {
   , keyword  :: String
   , constant :: String
   , comment  :: String
-  , func     :: String
-  , str      :: String
+  , function :: String
+  , string   :: String
   , types    :: String
-  , var      :: String
+  , variable :: String
   , warning  :: String
 } deriving ( Generic, Show )
 
@@ -112,8 +113,13 @@ loadTheme themePath = do
      let result = decode content :: Maybe Theme
      pure result
 
---compileAndRender :: FilePath -> IO (Maybe String)
-compileAndRender themeName = do
+compileTheme :: FilePath -> IO String
+compileTheme themeName = do
     theme <- loadTheme $ "resources/themes/" <> themeName
-    return theme
+    fromMaybe (pure mzero) (render <$> theme)
+
+writeTheme :: FilePath -> IO ()
+writeTheme themeName = do
+    compiled <- compileTheme $ themeName <> ".json"
+    writeFile (themeName <> ".el") compiled
 
