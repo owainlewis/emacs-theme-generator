@@ -118,6 +118,3 @@ compileAndRender themeName = do
           rendered <- render t
           writeFile "theme.el" rendered
         Nothing -> putStrLn "Could not parse template"
-
-
-
