@@ -11,6 +11,10 @@
 --
 module Text.Emacs.Theme
        ( render
+       , writeTheme
+       , compileTheme
+       , Palette(..)
+       , Theme(..)
        ) where
 
 import           Control.Applicative  ((<$>))
