@@ -13,6 +13,7 @@ module Text.Emacs.Theme
        ( render
        ) where
 
+import           Control.Applicative  ((<$>))
 import           Control.Monad        (mzero)
 import           Data.Aeson
 import qualified Data.ByteString.Lazy as BS
@@ -108,13 +109,11 @@ render theme = do
 loadTheme :: FilePath -> IO (Maybe Theme)
 loadTheme themePath = do
      content <- BS.readFile themePath
-     let maybeTheme = decode content :: Maybe Theme
-     return maybeTheme
+     let result = decode content :: Maybe Theme
+     pure result
 
+--compileAndRender :: FilePath -> IO (Maybe String)
 compileAndRender themeName = do
     theme <- loadTheme $ "resources/themes/" <> themeName
-    case theme of
-        Just t -> do
-          rendered <- render t
-          writeFile "theme.el" rendered
-        Nothing -> putStrLn "Could not parse template"
+    return theme
+
