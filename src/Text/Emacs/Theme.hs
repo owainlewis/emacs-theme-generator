@@ -126,4 +126,3 @@ writeTheme :: FilePath -> IO ()
 writeTheme themeName = do
     compiled <- compileTheme $ themeName <> ".json"
     writeFile (themeName <> ".el") compiled
-
