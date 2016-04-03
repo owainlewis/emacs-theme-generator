@@ -6,6 +6,12 @@ A Haskell program that generates Emacs 24 colour themes
 
 ## Use
 
+To compile all themes
+
+```
+stack build && stack exec emacs-theme-generator-exe
+```
+
 Themes are written as simple JSON and compiled into valid emacs themes.
 
 ```json
@@ -28,7 +34,7 @@ Themes are written as simple JSON and compiled into valid emacs themes.
         "string": "#FAFFDB",
         "types": "#FFE792",
         "variable": "#8AB8A2",
-        "warning": "#8AB8A2"       
+        "warning": "#8AB8A2"
     }
 }
 ```
