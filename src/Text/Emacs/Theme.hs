@@ -125,4 +125,4 @@ compileTheme themeName = do
 writeTheme :: FilePath -> IO ()
 writeTheme themeName = do
     compiled <- compileTheme $ themeName <> ".json"
-    writeFile (themeName <> ".el") compiled
+    writeFile (mconcat ["resources/generated/", themeName, ".el"]) compiled

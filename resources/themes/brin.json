@@ -1,0 +1,22 @@
+{
+    "name": "brin",
+    "palette": {
+        "fg1": "#c0c5ce",
+        "fg2": "#65737e",
+        "fg3": "#c0c5ce",
+        "fg4": "#c0c5ce",
+        "bg1": "#1d1f21",
+        "bg2": "#1d1f21",
+        "bg3": "#1d1f21",
+        "bg4": "#1d1f21",
+        "builtin": "#ffffff",
+        "keyword": "#c0c5ce",
+        "constant": "#8abeb7",
+        "comment": "#65737e",
+        "function": "#8fa1b3",
+        "string": "#a3be8c",
+        "types": "#8fa1b3",
+        "variable": "#bf616a",
+        "warning": "#de935f"
+    }
+}
