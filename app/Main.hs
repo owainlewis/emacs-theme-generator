@@ -6,7 +6,7 @@ import Data.List(isSuffixOf)
 import Control.Monad(forM_)
 import Control.Applicative ((<$>))
 
---main :: IO ()
+main :: IO ()
 main = do
     putStrLn "Generating all themes..."
     allThemes <- filter (isSuffixOf ".json") <$> getDirectoryContents "resources/themes"
