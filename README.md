@@ -18,14 +18,8 @@ Themes are written as simple JSON and compiled into valid emacs themes.
 {
     "name": "dorsey",
     "palette": {
-        "fg1": "#FFFFFF",
-        "fg2": "#999999",
-        "fg3": "#9FB3C2",
-        "fg4": "#9FB3C2",
-        "bg1": "#222",
-        "bg2": "#111",
-        "bg3": "#333",
-        "bg4": "#333",
+        "fg": "#FFFFFF",
+        "bg": "#222",
         "builtin": "#C7AF3F",
         "keyword": "#9FB3C2",
         "constant": "#999999",
