@@ -44,7 +44,7 @@
    `(default-italic ((,class (:italic t))))
    `(link ((,class (:foreground ,const :underline t))))
    `(term ((,class (:foreground ,fg :background ,bg))))
-   `(term-color-black ((,class (:foreground ,:background ,bg))))
+   `(term-color-black ((,class (:foreground ,fg :background ,bg))))
    `(term-color-blue ((,class (:foreground ,func :background ,func))))
    `(term-color-red ((,class (:foreground ,keyword :background ,bg))))
    `(term-color-green ((,class (:foreground ,type :background ,bg))))

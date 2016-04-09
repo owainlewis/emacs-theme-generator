@@ -1,0 +1,16 @@
+{
+    "name": "brin",
+    "palette": {
+        "bg": "#1b1b1b",
+        "fg": "#c0c5ce",
+        "builtin": "#d08770",
+        "keyword": "#c0c5ce",
+        "constant": "#d08770",
+        "comment": "#65737e",
+        "function": "#8fa1b3",
+        "string": "#a3be8c",
+        "types": "#c0c5ce",
+        "variable": "#bf616a",
+        "warning": "#65737e"
+    }
+}

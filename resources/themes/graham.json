@@ -1,0 +1,16 @@
+{
+    "name": "graham",
+    "palette": {
+        "bg": "#161616",
+        "fg": "#EEE",
+        "builtin": "#FFFAAA",
+        "keyword": "#FFA927",
+        "constant": "#F38630",
+        "comment": "#615953",
+        "function": "#FFD2A7",
+        "string": "#615953",
+        "types": "#F38630",
+        "variable": "#C6C5FE",
+        "warning": "#FF6C60"
+    }
+}
