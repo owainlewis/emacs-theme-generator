@@ -1,0 +1,16 @@
+{
+    "name": "shadow",
+    "palette": {
+        "bg": "#191919",
+        "fg": "#c2c2c2",
+        "builtin": "#54686d",
+        "keyword": "#8aa234",
+        "constant": "#8aa6c13",
+        "comment": "#808080",
+        "function": "#7a8bbd",
+        "string": "#5d90cd",
+        "types": "#8aa6c1",
+        "variable": "#8885b2",
+        "warning": "#ff6523"
+    }
+}

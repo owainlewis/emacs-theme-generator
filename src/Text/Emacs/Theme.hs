@@ -28,14 +28,8 @@ import           GHC.Generics
 import           Text.Regex           (Regex, matchRegexAll, mkRegex, subRegex)
 
 data Palette = Palette {
-    fg1      :: String
-  , fg2      :: String
-  , fg3      :: String
-  , fg4      :: String
-  , bg1      :: String
-  , bg2      :: String
-  , bg3      :: String
-  , bg4      :: String
+    bg      :: String
+  , fg      :: String
   , builtin  :: String
   , keyword  :: String
   , constant :: String
@@ -64,15 +58,9 @@ class ToMap a where
     toStringMap :: a -> M.Map String String
 
 instance ToMap Palette where
-    toStringMap (Palette fg1 fg2 fg3 fg4 bg1 bg2 bg3 bg4 builtin keyword constant comment func str types var warning) =
-        M.fromList [ ("fg1", fg1)
-                   , ("fg2", fg2)
-                   , ("fg3", fg3)
-                   , ("fg4", fg4)
-                   , ("bg1", bg1)
-                   , ("bg2", bg2)
-                   , ("bg3", bg3)
-                   , ("bg4", bg4)
+    toStringMap (Palette bg fg builtin keyword constant comment func str types var warning) =
+        M.fromList [ ("bg", bg)
+                   , ("fg", fg)
                    , ("builtin", builtin)
                    , ("keyword", keyword)
                    , ("constant", constant)

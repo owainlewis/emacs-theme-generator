@@ -1,0 +1,16 @@
+{
+    "name": "slime",
+    "palette": {
+        "bg": "#292424",
+        "fg": "#FCFCFC",
+        "builtin": "#C7AF3F",
+        "keyword": "#689dc5",
+        "constant": "#FFFFFF",
+        "comment": "#4F5A63",
+        "function": "#6a9ec5",
+        "string": "#FAFFDB",
+        "types": "#d8e778",
+        "variable": "#ffccff",
+        "warning": "#ff0000"
+    }
+}
